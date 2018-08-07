@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta lang="es">
+	<title>Contacto</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href=font/stylesheet.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+<body id="contacto">
+	<header id="header">
+		<nav id="navigation">
+			<ul class="menu">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="band.html" id="boton-banda">LA BANDA</a>
+				<div id="banda-desplegable">
+					Mark Knopfler<br>
+					John Illsley<br>
+					Alan Clark<br>
+				</div></li>
+			<li><img src="fotos/logo.jpg"></li>
+			<li><a href="news.html">NOTICIAS</a></li>
+			<li class="menu-rojo"><a href="contacto.html">CONTACTO</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<form action="formulario.php" method="POST" enctype="">
+	<fieldset id="fieldset-box">
+		<legend>Contacto</legend>
+		Sexo:
+		<br>
+		<div id="sexo">Hombre</div>
+		<input type="radio" name="sexo" value="hombre">
+		<div id="sexo">Mujer</div>
+		<input type="radio" name="sexo" value="mujer">
+
+		<br>
+		<br>
+
+		
+		<label for="Nombre">Nombre</label>
+		<br>
+		<input type="text" name="Nombre">
+	
+		<br><br>
+		<label for="mail">e-mail</label>
+		<br>
+		<input type="email" name="email">
+
+<br><br>
+		<select name="opciones">
+			<option value="newsletter">Quiero subscribirme al Newsletter</option>
+			<option value="rrhh">Quiero contactarme con RRHH</option>
+			<option value="opinion">quiero dejar una opinion</option>
+		</select>
+
+		<br><br>
+
+		<textarea rows="5" cols="50" placeholder="Leave your message"></textarea>
+<br><br>
+		<div id="sexo">Acepta los terminos y condiciones</div>
+		<input type="checkbox" name="Acepta" value="1">
+<br><br>
+		<input type="submit" name="Enviar">
+		<input type="reset" name="Borrar">
+		<br><br>
+
+	</fieldset>
+</form>
+
+	<footer>
+		<i class="far fa-copyright"></i>
+		<p>Dire Staits Copyright</p>
+
+		<div class="socialmedia">
+		<a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+		<a href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
+		<a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+	</div>
+	</footer>
+
+</body>
+</html>
+
