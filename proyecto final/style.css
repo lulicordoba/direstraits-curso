@@ -16,6 +16,7 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 99999;
 }
 
 @font-face {
@@ -93,12 +94,21 @@ div#banda-desplegable ul li a {
 	padding-top: 10px;
 }
 
+video {
+	width: 100%;
+}
+
+h1 {
+	font-family: "AlbertusMedium";
+	font-size: 30pt;
+}
+
 .cuerpo-home img {
 	width: 100%;
 	border-bottom: solid #FFD500 30px;
 }
 
-.cuerpo-home p {
+.cuerpo-home>p {
 	margin: 80px;
 	text-align: justify;
 	line-height: 20pt;
@@ -131,13 +141,16 @@ div#banda-desplegable ul li a {
 	text-align: left;
 }
 
-#sexo {
+.sexo {
 	display: inline-block;
 }
 
 #fieldset-box {
 	width: 20%;
-	margin: 150px auto;
+	margin: 50px auto;
+	padding: 50px;
+	background-color: rgba(47,79,79, 0.5);
+	border: none;
 }
 
 main.band {
@@ -173,35 +186,39 @@ main.band {
 	margin-left: 40px;
 }
 
-.noticias {
-	margin: 50px 80px;
+#noticias {
+	padding: 50px 80px;
+	background-image: url(fotos/the-dire-straits-experience.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.noticias p {
+#contenedor-noticias {
+	background-color: rgba(47,79,79, 0.5);
+}
+
+.columnas-noticias {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.articulo {
+	width: 30%;
+	margin: 0 25px;
+}
+
+#noticias p {
 	text-align: justify;
 }
 
-#left {
-	width: 30%;
-	float: left;
-	margin: 25px;
-}
 
-#right {
-	width: 30%;
-	float: right;
-	margin: 25px;
-}
-
-#center {
+.center {
 	border-left: solid white 2px;
 	border-right: solid white 2px;
 	display: inline-block;
-	width: 30%;
-	padding-left: 25px;
-	padding-right: 25px;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	padding: 0 25px;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 
@@ -253,17 +270,19 @@ footer>p {
 	margin-left: 5px;
 }
 
-body#contacto {
-	background: linear-gradient(to bottom, #000, #ccc);
+
+
+
+
+.discografia {
+	display: flex;
 }
-
-
-
-
 
 .container-disco {
 	line-height: 0;
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	position: relative;
 }
 
@@ -273,22 +292,92 @@ body#contacto {
 }
 
 .nombre-disco {
-	display: inline-block;
 	position: absolute;
-	top: 315px;
-	left: 20px;
+	top: 331px;
 }
 .nombre-disco p {
 	font-family: AlbertusMedium;
 	font-size: 25px;
-	margin: 0;
+	margin: 0 auto;
 	display: ;
-}
 
-.container-disco img:hover .nombre-disco p {
-	display: block;
 }
 
 .grid-discografia {
-	float: left;
+	display: flex;
+}
+
+.contenedor-songs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.album-songs {
+	line-height: 20pt; <!-- cuando hago esto se deforman las fotos. TENGO QUE PONERLE FLEX AL CONTENEDOR ENTERO Y AL CONTENEDOR DE FOTO Y TITULO, Y PONER OTRO CONTENEDOR PARA EL TEXTO PERO NO FLEX. igual si quiero que sea absolute no tiene sentido que sea flex  -->
+	<!-- le quiero dar ancho . flex-basis??-->
+}
+
+
+
+
+
+
+form {
+	margin: 20 auto;
+	padding: 50px 80px;
+}
+
+.contacto {
+	background-image: url(fotos/the-dire-straits-experience.jpg);
+}
+
+
+
+
+
+
+
+
+#newsletter {
+	background-color: lightgrey;
+	padding: 30px 10px;
+	display: inline-block;
+	width: 100%;
+}
+
+#datos {
+	display: inline-block;
+	width: 50%;
+}
+
+#newsletter-title {
+	display: inline-block;
+}
+
+#email {
+	height: 25px; 
+	padding: 10px;
+	margin: 10px;
+	display: inline-block;
+}
+
+#email input {
+	height: 30px;
+}
+
+#emailbox {
+	padding: 10px;
+}
+
+#enviar {
+	color: white;
+	font-family: arial;
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: #66ccff;
+	width: 100px;
+	height: 25px;
+	display: inline-block;
+	margin: 15px;
 }
