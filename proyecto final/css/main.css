@@ -1,0 +1,63 @@
+body {
+  font: helvetica white 12pt;
+  line-height: 20pt; }
+
+.cuerpo-home > p {
+  font: helvetica white 12pt;
+  line-height: 20pt; }
+
+.album-songs {
+  font: helvetica white 12pt;
+  line-height: 20pt; }
+
+div {
+  color: blue; }
+
+.right {
+  margin: 0 25px 0 0; }
+
+.left {
+  margin: 0 0 0 25px; }
+
+.center {
+  margin: 0; }
+
+.bottom {
+  margin: 0 0 25px 0; }
+
+.right {
+  padding: 0 0 0 25px; }
+
+.left {
+  padding: 0 25px 0 0; }
+
+.center {
+  padding: 0 25px; }
+
+.fa-facebook-f {
+  background-color: blue;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: white; }
+
+.fa-twitter {
+  background-color: lightblue;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: white; }
+
+.fa-instagram {
+  background-color: red;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: white; }
+
+#album-pictures img {
+  height: 314px;
+  width: 314px; }

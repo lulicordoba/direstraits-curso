@@ -1,0 +1,91 @@
+$texto-gral: helvetica white 12pt;
+$interlineado: 20pt;
+
+body {
+	font: $texto-gral;
+	line-height: $interlineado;
+}
+
+.cuerpo-home>p {
+	font: $texto-gral;
+	line-height: $interlineado;
+}
+
+.album-songs {
+	font: $texto-gral;
+	line-height: $interlineado;
+}
+
+
+$noticias-alineacion: left;
+div {
+	@if $noticias-alineacion == left {
+	color : blue ;
+	} 
+	@else if $noticias-alineacion == right {
+	color : red ;
+	} 
+	@else if $noticias-alineacion == center {
+	color : green ;
+	} 
+	@else if $noticias-alineacion == top {
+	color : black ;
+	}
+	@else if $noticias-alineacion == bottom {
+	color : white ;
+	}
+}
+
+
+$alineacion-noticias: (
+	right: 0 25px 0 0,
+	left:0 0 0 25px,
+	center: 0,
+	bottom: 0 0 25px 0
+);
+
+@each $noticias-margin, $medida-margin in $alineacion-noticias {
+	.#{$noticias-margin} {
+		margin: $medida-margin;
+	}
+}
+
+
+$alineacion-noticias2: (
+	right: 0 0 0 25px,
+	left:0 25px 0 0, 
+	center: 0 25px,
+);
+
+@each $noticias-padding, $medida-padding in $alineacion-noticias2 {
+	.#{$noticias-padding} {
+		padding: $medida-padding;
+	}
+}
+
+
+
+$socialmedia: (fa-facebook-f: blue, fa-twitter: lightblue, fa-instagram: red);
+
+@each $bgredes, $bgcolor in $socialmedia {
+   .#{$bgredes} {
+       background-color: $bgcolor;
+       border-radius: 25px;
+		padding: 10px;
+		margin-left: 5px;
+       
+       text-decoration: none;
+       color: white;
+   }
+}
+
+
+
+@mixin sizes ( $width , $height ) {
+	height : $height ;
+	width : $width ;
+}
+
+#album-pictures img {
+	@include sizes (314px, 314px);
+}
